@@ -7,7 +7,7 @@ const Register =()=>{
         const name  = e.target.name.value;
         const age=e.target.age.value;
         const users={name,age}
-         await axios.post('https://fsd-backend-dsb-1.onrender.com',users)
+         await axios.post('http://localhost:9000/users',users)
          console.log(users)
          alert('user Registration Successfully')
     }

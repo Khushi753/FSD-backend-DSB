@@ -7,7 +7,7 @@ const Update = () => {
         const name = e.target.name.value
         const age = e.target.age.value
         const data={name,age}
-        await axios.put(`https://fsd-backend-dsb-1.onrender.com/users/${id}`,data)
+        await axios.put(`http://localhost:9000/users/${id}`,data)
         alert("Success")
     }
 
