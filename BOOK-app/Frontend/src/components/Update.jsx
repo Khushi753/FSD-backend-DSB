@@ -18,7 +18,7 @@ const Update = () => {
 
   const fetchBooks = async () => {
     try {
-      const res = await axios.get('http://localhost:9000/books');
+      const res = await axios.get('https://fsd-backend-dsb-3-76sg.onrender.com/books');
       setBooks(res.data);
     } catch (error) {
       console.error(error);
@@ -49,7 +49,7 @@ const Update = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:9000/books/${selectedBookId}`, formData); 
+      await axios.put(`https://fsd-backend-dsb-3-76sg.onrender.com/books/${selectedBookId}`, formData); 
       alert('Book updated successfully');
       fetchBooks(); 
     } catch (error) {
